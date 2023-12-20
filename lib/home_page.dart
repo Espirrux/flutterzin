@@ -30,7 +30,15 @@ class HomePage extends StatelessWidget {
         width: 200,
         height: 200,
         color: Colors.deepPurple,
-        child: const Center(child: Text('Texto',),),
+        child: const Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text('Teste'),
+            Text('Teste'),
+            Text('Teste'),
+          ],
+        )
       )
     );
   }
