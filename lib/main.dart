@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutterzin/home_page.dart';
 
-void main() { //Inicia o APP!
+void main() {
   runApp(
-    MaterialApp(
-    home: HomePage(),
+    const MaterialApp(
+      home: HomePage(),
   ));
 }
 

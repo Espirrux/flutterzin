@@ -26,7 +26,12 @@ class HomePage extends StatelessWidget {
         ],
       ),
       drawer: const Drawer(), //Menu de Hamburguer para mais opções de Menus, etc... (Barra Lateral)
-      body: const Center(child: Text('Texto'),), 
+      body: Container(
+        width: 200,
+        height: 200,
+        color: Colors.deepPurple,
+        child: const Center(child: Text('Texto',),),
+      )
     );
   }
 }
