@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutterzin/models/felipe.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+
+  Felipe eu = Felipe('VNTC', 20, 18000.20);
 
   @override
   Widget build(BuildContext context) {
@@ -9,9 +18,9 @@ class HomePage extends StatelessWidget {
       //"Alicerce" da Pagina (sempre necessário, é base)!
       appBar: AppBar(
         //Gera Barra de Status e a AppBar dentro do APP!
-        title: const Text('Hello World', 
+        title: Text(eu.getName, 
         //Gera algum estilo para dentro do texto, ele vai dentro do parenteses do Text!
-        style: TextStyle(
+        style: const TextStyle(
           color: Colors.white, 
           fontSize: 30),), //Titulo
         backgroundColor: Colors.deepPurpleAccent, //Cor de Fundo da AppBar
@@ -27,8 +36,8 @@ class HomePage extends StatelessWidget {
       ),
       drawer: const Drawer(), //Menu de Hamburguer para mais opções de Menus, etc... (Barra Lateral)
       body: Container(
-        width: 200,
-        height: 200,
+        width: 400,
+        height: 800,
         color: Colors.deepPurple,
         child: const Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -37,6 +46,13 @@ class HomePage extends StatelessWidget {
             Text('Teste'),
             Text('Teste'),
             Text('Teste'),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Text('Text Row'),
+                SizedBox(width: 100,), //Serve para dar espaço entre objetos
+                Text('Text Row'),
+            ],),
           ],
         )
       )
